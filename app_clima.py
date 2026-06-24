@@ -10,7 +10,7 @@ st.markdown("Insira o nome de uma cidade para consultar as condições atuais.")
 cidade = st.text_input("Digite o nome da cidade:", "Sao Paulo")
 
 # USE A SUA CHAVE ATIVA AQUI
-API_KEY = '792cae03ac92e8f43d2e9d468fb08586'  
+API_KEY = st.secrets["OPENWEATHER_KEY"] 
 url = f"https://api.openweathermap.org/data/2.5/weather?q={cidade}&appid={API_KEY}"
 
 if st.button("Consultar Clima"):
